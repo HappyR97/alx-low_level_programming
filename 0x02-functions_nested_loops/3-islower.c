@@ -3,13 +3,14 @@
 
 /**
  * _islower - Checks if input is a lowercase character
+ *@c: ASCII int
  *
- * Return: if input is lowercase character, return 1. If input is uppercase, return 0.
+ * Return: if input is lowercase character, return 1. Otherwise return 0
 */
 
 int _islower(int c)
 {
-	if(c < 123 && c > 96)
+	if (c < 123 && c > 96)
 	{
 		return (1);
 	}
