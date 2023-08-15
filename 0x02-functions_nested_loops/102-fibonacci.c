@@ -20,7 +20,6 @@ int main(void)
 
 		f = s;
 		s = t;
-		i++;
 
 		if (i == 49)
 		{
@@ -30,6 +29,7 @@ int main(void)
 		{
 			printf(", ");
 		}
+		i++;
 	}
 	return (0);
 }
