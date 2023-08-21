@@ -13,6 +13,7 @@ int _atoi(char *s)
 	 int str_length = 0;
 	 int negative = 0;
 	 int found_digit = 0;
+	 int digit = 0;
 
 	while (s[str_length] != '\0')
 		str_length++;
@@ -25,7 +26,7 @@ int _atoi(char *s)
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			int digit = s[i] - '0';
+			digit = s[i] - '0';
 
 			if (negative % 2)
 			{
@@ -43,7 +44,7 @@ int _atoi(char *s)
 	}
 
 	if (found_digit == 0)
-	return (0);
+		return (0);
 
 	return (num);
 }
