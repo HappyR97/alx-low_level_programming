@@ -2,12 +2,18 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * main - entry point
+ *
+ * Return: Always 0
+ */
+
 int main(void)
 {
 	int total;
 	char l;
 
-	strand(time(NULL));
+	srand(time(NULL));
 	while (total <= 2645)
 	{
 		l = rand() % 128;
