@@ -17,7 +17,7 @@ char *cap_string(char *str)
 		i++;
 	}
 
-	if(str[0] > 96 && str[0] < 123)
+	if (str[0] > 96 && str[0] < 123)
 	{
 		str[0] = str[0] - 32;
 	}
