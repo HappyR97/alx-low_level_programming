@@ -2,8 +2,8 @@
 
 /**
  * *string_toupper - Changes all lowercase letters to uppercase
- * @: string to change
- * 
+ * @str: string to change
+ *
  * Return: new string
  */
 
@@ -23,7 +23,7 @@ char *string_toupper(char *str)
 		{
 			str[j] = str[j] - 32;
 		}
-       	}
+	}
 
 	return (str);
 }
