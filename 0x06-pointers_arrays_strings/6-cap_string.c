@@ -17,6 +17,11 @@ char *cap_string(char *str)
 		i++;
 	}
 
+	if(str[0] > 96 && str[0] < 123)
+	{
+		str[0] = str[0] - 32;
+	}
+
 	for (j = 0; j < i; j++)
 	{
 		if (str[j] == ' ' || str[j] == '\t' || str[j] == '\n'
