@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point, prints name of compiled file
- * 
+ *
  * Return: Always 0
  */
 
