@@ -20,13 +20,6 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod}
 	};
 
-	/*
-	operations[0] = {'+', op_add};
-	operations[1] = {'-', op_sub};
-	operations[2] = {'*', op_mul};
-	operations[3] = {'/', op_div};
-	operations[4] = {'%', op_mod};
-	*/
 	i = 0;
 
 	while (i < 5)
