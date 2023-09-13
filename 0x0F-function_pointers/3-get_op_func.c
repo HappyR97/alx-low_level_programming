@@ -31,8 +31,9 @@ int (*get_op_func(char *s))(int, int)
 
 	while (i < 5)
 	{
-		if (s == operations[i].op)
+		if (*s == *operations[i].op)
 			return (operations[i].f);
+		i++;
 	}
 
 	return (NULL);
