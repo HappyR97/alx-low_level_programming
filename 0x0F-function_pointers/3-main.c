@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if ((argv[2] == '/' || argv[2] == "%") && argv[0] == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[0] == 0)
 	{
 		printf("Error\n");
 		exit(100);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", operation((atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", operation(atoi(argv[1]), atoi(argv[3])));
 
 
 	return (0);
