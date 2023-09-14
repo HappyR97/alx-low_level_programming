@@ -76,15 +76,24 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
+	i = 0;
+
 	while (format[i])
 	{
+		j = 0;
 		while (j < 5)
 		{
 			if (format[i] == arr[j].c)
+			{
 				arr[j].f(args);
+				if (format[i + 1])
+					printf(", ");
+				break;
+			}
 			j++;
 		}
 		i++;
 	}
+	printf("\n");
 	va_end(args);
 }
