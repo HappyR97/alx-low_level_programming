@@ -46,18 +46,8 @@ void print_float(va_list args)
 
 void print_str(va_list args)
 {
-	char *str = va_arg(args, char*);
-	char *nil = "";
-
-	switch (*str)
-	{
-		case '\0':
-			nil = "(nil)";
-			break;
-		default:
-			printf("%s", str);
-	}
-	printf("%s", nil);
+	char *str = va_arg(args, char *);
+	printf("%s", str == NULL ? "(nil)" : str);
 }
 
 /**
