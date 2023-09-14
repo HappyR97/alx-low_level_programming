@@ -46,11 +46,6 @@ void print_float(va_list args)
 
 void print_str(va_list args)
 {
-	if (!args)
-	{
-		printf("(nil)");
-		return;
-	}
 	printf("%s", va_arg(args, char *));
 }
 
