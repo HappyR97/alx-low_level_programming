@@ -1,6 +1,9 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
+#include <stdarg.h>
+#include <stdio.h>
+
 /**
  * struct formats - Sturct for each accepted format and its function
  * @c: format character
