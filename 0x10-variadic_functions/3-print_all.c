@@ -3,7 +3,7 @@
 
 /**
  * print_char - Prints a character
- * @args - character to print (from va_list)
+ * @args: character to print (from va_list)
  *
  * Return: void
  */
@@ -15,7 +15,7 @@ void print_char(va_list args)
 
 /**
  * print_int - Prints an integer
- * @args - integer to print (from va_list)
+ * @args: integer to print (from va_list)
  *
  * Return: void
  */
@@ -27,7 +27,7 @@ void print_int(va_list args)
 
 /**
  * print_float - Prints a float number
- * @args - number to print (from va_list)
+ * @args: number to print (from va_list)
  *
  * Return: void
  */
@@ -39,7 +39,7 @@ void print_float(va_list args)
 
 /**
  * print_str - Prints a string
- * @args - string to print (from va_list)
+ * @args: string to print (from va_list)
  *
  * Return: void
  */
