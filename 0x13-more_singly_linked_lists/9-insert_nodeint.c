@@ -17,9 +17,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int i, count;
 
 	new_ptr = create_node(n);
-	count = listint_len(*head);
+	if (new_ptr == NULL || head == NULL)
+		return (NULL);
 
-	if (idx > count || head == NULL)
+	count = listint_len(*head);
+	if (idx > count)
 		return (NULL);
 	if (idx == 0)
 	{
@@ -56,6 +58,8 @@ listint_t *create_node(int n)
 	listint_t *ptr;
 
 	ptr = malloc(sizeof(listint_t));
+	if (!ptr)
+		return (NULL);
 	ptr->n = n;
 	ptr->next = NULL;
 
