@@ -19,7 +19,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_ptr = create_node(n);
 	count = listint_len(*head);
 
-	if (idx > count)
+	if (idx > count || head == NULL)
 		return (NULL);
 	if (idx == 0)
 	{
