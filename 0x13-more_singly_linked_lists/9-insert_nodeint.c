@@ -14,9 +14,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *ptr;
 	listint_t *new_ptr;
-	unsigned int i = 0;
+	unsigned int i, count;
 
 	new_ptr = create_node(n);
+	count = listint_len(*head);
+
+	if (idx > count)
+		return (NULL);
 	if (idx == 0)
 	{
 		new_ptr->next = *head;
@@ -24,6 +28,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (new_ptr);
 	}
 	ptr = *head;
+	i = 0;
 	while (i < idx - 1)
 	{
 		if (!ptr)
@@ -55,4 +60,27 @@ listint_t *create_node(int n)
 	ptr->next = NULL;
 
 	return (ptr);
+}
+
+/**
+ * listint_len - Returns number of elemens in list
+ * @h: Head pointer
+ *
+ * Return: count
+ */
+
+size_t listint_len(const listint_t *h)
+{
+	const listint_t *ptr;
+	unsigned int count;
+
+	count = 0;
+	ptr = h;
+	while (ptr != NULL)
+	{
+		count++;
+		ptr = ptr->next;
+	}
+
+	return (count);
 }
