@@ -19,29 +19,23 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	ptr2 = *head;
 	if (index == 0)
 	{
-		ptr2 = ptr2->next;
-		free(*head);
-		*head = ptr2;
-		return (1);
-	}
-	for (i = 0; i != index; i++)
-	{
-		if (!ptr2)
-			return (-1);
-		ptr2 = ptr2->next;
-	}
-	if (ptr2->next == NULL)
-	{
-		ptr2->prev->next = NULL;
+		*head = ptr2->next;
+		if (*head)
+			(*head)->prev = NULL;
 		free(ptr2);
-		ptr2 = NULL;
 		return (1);
 	}
-	ptr1 = ptr2->prev;
-	ptr1->next = ptr2->next;
-	ptr2->next->prev = ptr1;
-	free(ptr2);
-	ptr2 = NULL;
+	for (i = 0; i < index && ptr2 != NULL; i++)
+		ptr2 = ptr2->next;
+	if (!ptr2)
+		return (-1);
 
+	ptr1 = ptr2->prev;
+	if (ptr1)
+		ptr1->next = ptr2->next;
+	if (ptr2->next)
+		ptr2->next->prev = ptr1;
+
+	free(ptr2);
 	return (1);
 }
