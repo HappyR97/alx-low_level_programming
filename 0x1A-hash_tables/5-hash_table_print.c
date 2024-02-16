@@ -30,7 +30,7 @@ void hash_table_print(const hash_table_t *ht)
 			else
 				comman = 1;
 		}
-		if (comma && ht->array[i])
+		if (comma && *(ht->array + index))
 			printf(", ");
 	}
 	printf("}\n");
